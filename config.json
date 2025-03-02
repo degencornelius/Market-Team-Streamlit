@@ -1,0 +1,30 @@
+{
+  "newsapi_key": "fa51c1c0b5a444c2ba4801676fb4ac47",
+  "veniceai_key": "p4fQEZrmSvCKQjjm_xihN5dEnGem-Bf0dkH8FOJiWa",
+  "text_model": "llama-3.3-70b",
+  "image_model": "flux-dev",
+  "keywords": "mindfulness bundle, stress relief, meditation practices, mental clarity",
+  "intent": "educational",
+  "article_length": 500,
+  "pinterest_access_token": "your_sandbox_access_token_here",
+  "reference_links": [],
+  "target_audience": "busy professionals and mindfulness beginners",
+  "call_to_action": "Get the Obtain Mindfulness Bundle for $14.99 Now!",
+  "affiliate_link": "https://payhip.com/b/tnVQN",
+  "seo_keywords": [
+  "mindfulness bundle",
+  "benefits of mindfulness",
+  "how to practice mindfulness",
+  "mindfulness for beginners",
+  "stress relief techniques",
+  "meditation for mental clarity",
+  "daily mindfulness practices"
+  ],
+  "content_format": "listicle",
+  "tone_and_style": "uplifting and conversational",
+  "image_style": "realistic",
+  "outputs": ["pinterest"],
+  "post_ratio": 3,
+  "bannerbear_key": "bb_pr_65341a75ada2b971af32e4ea4949fd",
+  "bannerbear_template_id": "A37YJe5qLOpAZmpvWK"
+ }
