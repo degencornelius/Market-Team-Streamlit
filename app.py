@@ -64,17 +64,17 @@ def generate_image(platform, image_prompt, model, config):
         return None
 
 def fact_check_content(content, config, references=None):
-    prompt = "Verify the accuracy of the following content...\n\n" + content
-    if references:
-        prompt += f"\n\nReferences: {', '.join(references)}"
+    prompt = f"Verify the accuracy of the following content using these references if provided: {', '.join(references) if references else 'general knowledge'}\n\nContent: {content}\n\nReturn: 'Confidence: X - Explanation', where X is 0-100 and Explanation details accuracy or inaccuracies."
     response = generate_content(prompt, config["text_model"], config, "You are an expert fact-checker.")
+    st.write("Fact-check response:", response)  # Debug output
     if response:
         try:
             confidence = int(response.split("Confidence:")[1].split()[0])
             explanation = response.split(" - ")[1]
             return confidence >= 60, confidence, explanation
-        except:
-            return False, 50, "Failed to parse fact-check response."
+        except Exception as e:
+            st.error(f"Fact-check parsing error: {str(e)}")
+            return False, 50, f"Failed to parse fact-check response: {str(e)}"
     return False, 0, "Fact-checking failed."
 
 def upscale_image(image_bytes, scale_factor, config):
